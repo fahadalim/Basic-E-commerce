@@ -20,7 +20,7 @@ export const CartReducer = (state, action) => {
           qty: updatedQty,
         };
         } 
-        break; 
+        // break; 
         case "INC":
         product = action.cart;
         product.qty = product.qty+1
@@ -43,7 +43,7 @@ export const CartReducer = (state, action) => {
         else {
           return state;
         }
-        break;
+        // break;
 
         case 'DELETE':
             const filtered = shoppingCart.filter(product=>product.id!== action.id)
@@ -53,7 +53,7 @@ export const CartReducer = (state, action) => {
             return {shoppingCart:[...filtered],totalPrice:updatedPrice,qty:updatedQty}
 
 
-        break;
+        // break;
 
         default:
         return state;
